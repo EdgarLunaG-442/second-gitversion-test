@@ -1,1 +1,1 @@
-# second-gitversion-test
+# second-gitversion-test.
