@@ -1,0 +1,24 @@
+name: CI-CD
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - feature/*
+    - develop
+    - release/*
+    - hotfix/*
+    paths-ignore:
+      - 'VERSION'
+env:
+  DOCKER_REGISTRY_REPO: github/valf/develop
+  DOCKER_FILE_PATH: ./deployment/Dockerfile.prod
+  REGISTRY_URI: paz1euk8sacr01.azurecr.io
+  PUBLISH_TO_REGISTRY_PATTERN: publish-to-registry
+jobs:        
+  calculate-version:
+    uses: ./.github/workflows/calculate-version.yaml
+    secrets: inherit
+    with:
+      VERSION_USE_CONFIG_FILE: true
+      WITH_REPO_TAGGING: true
+        
