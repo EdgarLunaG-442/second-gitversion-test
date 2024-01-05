@@ -7,8 +7,13 @@ on:
     - develop
     - release/*
     - hotfix/*
-    paths-ignore:
-      - 'VERSION'
+  pull_request:
+    branches:
+    - feature/*
+    - develop
+    - release/*
+    - hotfix/*
+    
 env:
   DOCKER_REGISTRY_REPO: github/valf/develop
   DOCKER_FILE_PATH: ./deployment/Dockerfile.prod
