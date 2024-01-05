@@ -9,10 +9,7 @@ on:
     - hotfix/*
   pull_request:
     branches:
-    - feature/*
     - develop
-    - release/*
-    - hotfix/*
     
 env:
   DOCKER_REGISTRY_REPO: github/valf/develop
