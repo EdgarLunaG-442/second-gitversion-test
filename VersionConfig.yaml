@@ -16,7 +16,7 @@ branches:
     track-merge-target: false
     tracks-release-branches: true
     is-release-branch: false
-    source-branches: ['master','release','feature']
+    source-branches: ['master','release','feature','hotfix']
   hotfix:
     regex: ^hotfixe?s?[/-]
     tag: 'hotfix-{BranchName}'
@@ -25,7 +25,7 @@ branches:
     track-merge-target: false
     tracks-release-branches: true
     is-release-branch: false
-    source-branches: ['master','release','feature']
+    source-branches: ['master','release','feature','hotfix']
   release:
     regex: ^releases?[/-]
     tag: ''
